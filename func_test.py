@@ -15,9 +15,9 @@ class NewVisitorTest(unittest.TestCase):
     def test_start_list_retrieve_later(self):
         self.browser.get('http://localhost:8000')
 
-        self.assertIn('To-Do', self.browser.title)
+        self.assertIn('To-Do Lists', self.browser.title)
         header_text = self.browser.find_element_by_tag_name('h1').text
-        self.assertIn('To-Do', header_text)
+        self.assertIn('To-Do Lists', header_text)
 
         inputbox = self.browser.find_element_by_id('id_new_item')
         self.assertEqual(
